@@ -4,22 +4,20 @@ let answer = prompt("You want to convert to Celsium or Fahrenheit? Press C/F").t
 
 let degree;
 
-if (answer === "c" ){
+if (answer === "f" ){
     degree = +prompt("Please, enter degree in Celsium to convert: ");
-   alert(toС(degree));
-} else if (answer === "f"){
+   alert(`It is ${toF(degree).toFixed(1)} °F`);
+} else if (answer === "c"){
     degree = +prompt("Please, enter degree in Fahrenheit to convert: ");
-    alert(toА(degree));
+    alert(`It is ${toC(degree).toFixed(1)} °C`);
 } else {
     alert("Invalid choice. Please enter C or F.");
 }
 
-function toА(degree){
-    let fahrenheit= (degree * 1.8) + 32;
-    return `It is ${fahrenheit.toFixed(1)} °F`;
+function toF(c){
+    return c * 9/5 + 32;
 }
 
-function toС(degree){
-    let celsium = (degree - 32) / 1.8;
-    return `It is ${celsium.toFixed(1)} °C`;
+function toC(f){
+    return (f - 32) * 5/9;
 }
