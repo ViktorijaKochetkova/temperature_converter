@@ -1,12 +1,6 @@
 "use strict";
 
-function toF(c){
-    return c * 9/5 + 32;
-}
-
-function toC(f){
-    return (f - 32) * 5/9;
-}
+import { toF, toC } from "./converter-core.js";
 
 let answer = prompt("You want to convert to Celsium or Fahrenheit? Press C/F").trim().toLowerCase();
 
